@@ -16,7 +16,7 @@ If you want to make JUnit tests work, than don't forget to open **'application.p
 ### Additional tasks
 - [x] Basic auth
 - [x] Caching
-- [ ] Build and deyployment in cluster
+- [ ] Build and deyployment in cloud
 
 ## Technologies
 - JDK 19
