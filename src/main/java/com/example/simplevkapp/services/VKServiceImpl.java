@@ -13,6 +13,7 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -108,9 +109,11 @@ public class VKServiceImpl implements VKService {
     }
 
     @Override
+    @Cacheable(value = "users", key = "#restRequest.userID")
     public RestResponse buildUser(String accessToken, RestRequest restRequest) throws ApiException {
+        System.out.println("Starting activity to find user by user_id: " + restRequest.getUserID());
+
         isFormatCorrect(restRequest.getUserID(), "user_id");
-        //isFormatCorrect(restRequest.getGroupID(), "group_id");
 
         var user = callGetUserName(accessToken, restRequest);
         return new RestResponse(
