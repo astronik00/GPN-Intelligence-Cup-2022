@@ -16,8 +16,7 @@ If you want to make JUnit tests work, than don't forget to open **'application.p
 ### Additional tasks
 - [x] Basic auth
 - [x] Caching
-- [ ] Build and deyployment in cloud
-
+- [ ] Build and deyployment in cloud (Does Docker container count..?)
 ## Technologies
 - JDK 19
 - Spring boot 2.7.5
