@@ -26,7 +26,7 @@ public class VKServiceImpl implements VKService {
             HttpGet httpGet = new HttpGet(url);
             return httpClient.execute(httpGet);
         } catch (IOException e) {
-            throw new ApiException(300, "Error happened during performing request to VK API");
+            throw new ApiException(301, "Error happened during performing request to VK API");
         }
     }
 
@@ -51,7 +51,7 @@ public class VKServiceImpl implements VKService {
                         .getError();
                 throw new ApiException(error.getCode(), error.getMessage());
             } catch (IOException var2) {
-                throw new ApiException(301, "Cannot parse VK API response groups.IsMember()");
+                throw new ApiException(302, "Cannot parse VK API response groups.IsMember()");
             }
         }
     }
