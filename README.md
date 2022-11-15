@@ -10,7 +10,7 @@ If you want to make JUnit tests work, than don't forget to open **'application.p
 ### Required tasks
 - [x] Data validation
 - [x] Exceptions handling
-- [x] OpenAPI 3.0 description for REST-methods
+- [x] OpenAPI 3.0 [description](restDocs.yaml) for REST-methods
 - [x] JUnit tests
 
 ### Additional tasks
