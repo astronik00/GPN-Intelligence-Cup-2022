@@ -14,6 +14,8 @@ tags:
 paths:
   /user:
     post:
+      security:
+        - basicAuth: []
       tags:
         - user
       summary: Get VK user
@@ -34,9 +36,15 @@ paths:
       responses:
         '200':
           description: User was found
+        '401':
+          description: Unauthorized request
         '404':
           description: User not found
 components:
+  securitySchemes:
+    basicAuth:     # <-- arbitrary name for the security scheme
+      type: http
+      scheme: basic
   schemas:
     RestRequest:
       type: object
