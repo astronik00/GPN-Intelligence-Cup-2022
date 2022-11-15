@@ -2,7 +2,7 @@
 Rest server that works with VK API, created as a solution for GPN Intelligence Cup
 
 ## How to run
-You can run application in two ways: run in IDE or run Dockerfile and open one in the container. To run Dockerfile you need to generate 'out' folder and get 'Application.jar' file. 
+You can run application in two ways: run in IDE or run [Dockerfile](Dockerfile) and open one in the container. To run Dockerfile you need to generate 'out' folder and get 'Application.jar' file. 
 
 If you want to make JUnit tests work, than don't forget to open **'application.properties'** file and write your service token to **'vk.api.config.access_token'** variable.
 
