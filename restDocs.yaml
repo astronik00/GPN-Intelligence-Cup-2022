@@ -42,7 +42,7 @@ paths:
           description: User not found
 components:
   securitySchemes:
-    basicAuth:     # <-- arbitrary name for the security scheme
+    basicAuth:
       type: http
       scheme: basic
   schemas:
