@@ -1,0 +1,39 @@
+package com.example.simplevkapp.services;
+
+import com.example.simplevkapp.SimpleVkAppApplicationTests;
+import com.example.simplevkapp.configurations.VKConfiguration;
+import com.example.simplevkapp.models.MyExceptions.ApiException;
+import com.example.simplevkapp.models.MyRest.RestRequest;
+import com.example.simplevkapp.models.MyRest.RestResponse;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+import java.io.IOException;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class VKServiceImplTest extends SimpleVkAppApplicationTests {
+
+    @Autowired
+    private VKService vkService;
+
+    @Autowired
+    private VKConfiguration vkConfiguration;
+
+    @Test
+    void buildUser() throws IOException, ApiException {
+        var request = new RestRequest("1", "catx2");
+
+        System.out.println("User " + vkService
+                .buildUser(vkConfiguration.getAccessToken(), request)
+                .getFirstName() + " was found");
+        System.out.println("User " + vkService
+                .buildUser(vkConfiguration.getAccessToken(), request)
+                .getFirstName() + " was found");
+        System.out.println("User " + vkService
+                .buildUser(vkConfiguration.getAccessToken(), request)
+                .getFirstName() + " was found");
+    }
+}
