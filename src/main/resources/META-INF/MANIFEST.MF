@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Main-Class: com.example.simplevkapp.SimpleVkAppApplication
+Class-Path: jackson-annotations-2.13.4.jar spring-expression-5.3.23.jar 
+ jackson-module-parameter-names-2.13.4.jar lombok-1.18.24.jar spring-aop
+ -5.3.23.jar jackson-datatype-jsr310-2.13.4.jar jackson-core-2.14.0.jar 
+ httpcore-4.4.15.jar slf4j-api-1.7.36.jar spring-boot-autoconfigure-2.7.
+ 5.jar log4j-api-2.17.2.jar logback-core-1.2.11.jar jul-to-slf4j-1.7.36.
+ jar spring-web-5.3.23.jar tomcat-embed-core-9.0.68.jar httpclient-4.5.1
+ 3.jar spring-boot-starter-logging-2.7.5.jar spring-boot-starter-json-2.
+ 7.5.jar spring-core-5.3.23.jar jakarta.annotation-api-1.3.5.jar snakeya
+ ml-1.30.jar spring-boot-starter-tomcat-2.7.5.jar log4j-to-slf4j-2.17.2.
+ jar spring-jcl-5.3.23.jar spring-beans-5.3.23.jar logback-classic-1.2.1
+ 1.jar commons-codec-1.15.jar spring-webmvc-5.3.23.jar tomcat-embed-webs
+ ocket-9.0.68.jar jackson-databind-2.13.4.2.jar spring-context-5.3.23.ja
+ r tomcat-embed-el-9.0.68.jar spring-boot-starter-2.7.5.jar spring-boot-
+ 2.7.5.jar spring-boot-starter-web-2.7.5.jar jackson-datatype-jdk8-2.13.
+ 4.jar
+

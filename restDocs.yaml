@@ -1,0 +1,68 @@
+openapi: 3.0.3
+info:
+  title: Swagger SimpleVKApp - OpenAPI 3.0
+  description: |-
+    This is rest service for GPN Intelligence Cup.
+  contact:
+    email: astronik00@gmail.com
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+tags:
+  - name: user
+    description: Operations about user
+paths:
+  /user:
+    post:
+      tags:
+        - user
+      summary: Get VK user
+      description: Get user's first name and last name by user_id and membership in group_id.
+      operationId: getUser
+      parameters:
+        - name: access_token
+          in: header
+          description: service access key to VK API
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RestRequest'
+      responses:
+        '200':
+          description: User was found
+        '404':
+          description: User not found
+components:
+  schemas:
+    RestRequest:
+      type: object
+      properties:
+        user_id:
+          type: string
+          example: 1
+        group_id:
+          type: string
+          example: 12345
+      xml:
+        name: rest_request
+    RestResponse:
+      type: object
+      properties:
+        first_name:
+          type: string
+          example: Pavel
+        last_name:
+          type: string
+          example: Durov
+        middle_name:
+          type: string
+          example: Durov
+        member:
+          type: string
+          example: false
+      xml:
+        name: rest_response
